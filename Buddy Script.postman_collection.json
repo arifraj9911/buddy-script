@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "5fa0824e-3aef-42a0-8749-aa817adec008",
+		"name": "Buddy Script",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38035064"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"EEE\",\r\n    \"lastName\":\"Dept\",\r\n    \"email\":\"arif.eee161@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/users/create",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"EEE\",\r\n    \"lastName\":\"Dept\",\r\n    \"email\":\"arif.eee161@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/users",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"arif.eee161@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/auth/login",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFRUUiLCJsYXN0TmFtZSI6IkRlcHQiLCJlbWFpbCI6ImFyaWYuZWVlMTYxQGdtYWlsLmNvbSIsImlhdCI6MTc2NDA1OTk0MywiZXhwIjoxNzY0NjY0NzQzfQ.18WbM8R0Fk9qtp4irKA-Gtdb_NQYqDoRLLwZyLVa9As",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/NEW/Downloads/demon_slayer.jpeg"
+								},
+								{
+									"key": "data",
+									"value": "{\"text\":\"Demon Slayer: Kimetsu no Yaiba (TV Series 2019–2024)\"}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_API}}/post/create",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFRUUiLCJsYXN0TmFtZSI6IkRlcHQiLCJlbWFpbCI6ImFyaWYuZWVlMTYxQGdtYWlsLmNvbSIsImlhdCI6MTc2NDA1OTk0MywiZXhwIjoxNzY0NjY0NzQzfQ.18WbM8R0Fk9qtp4irKA-Gtdb_NQYqDoRLLwZyLVa9As",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_API}}/post",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like post",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBS2hpbXVuIE5haGFyIiwibGFzdE5hbWUiOiJNaW0iLCJlbWFpbCI6Im1pbUBnbWFpbC5jb20iLCJpYXQiOjE3NjQwNjM1MjMsImV4cCI6MTc2NDY2ODMyM30.aa_Z6lV6lOMMmsoQfsaCqio6vaXOVRTxLCRmhKpMbeY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_API}}/post/like/692571726dc6d12670384cd6",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"post",
+								"like",
+								"692571726dc6d12670384cd6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment on post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJBS2hpbXVuIE5haGFyIiwibGFzdE5hbWUiOiJNaW0iLCJlbWFpbCI6Im1pbUBnbWFpbC5jb20iLCJpYXQiOjE3NjQwNjM1MjMsImV4cCI6MTc2NDY2ODMyM30.aa_Z6lV6lOMMmsoQfsaCqio6vaXOVRTxLCRmhKpMbeY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"2nd comment of mim\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/post/comment/692571726dc6d12670384cd6",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"post",
+								"comment",
+								"692571726dc6d12670384cd6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reply on comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFRUUiLCJsYXN0TmFtZSI6IkRlcHQiLCJlbWFpbCI6ImFyaWYuZWVlMTYxQGdtYWlsLmNvbSIsImlhdCI6MTc2NDA2NDcxNiwiZXhwIjoxNzY0NjY5NTE2fQ.I-L6ijhBqpuJVkSx3V5gvpYBUWlkglKR9HJF2uW7HJY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"reply 2nd comment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_API}}/post/:postId/comment/:commentId/reply",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"post",
+								":postId",
+								"comment",
+								":commentId",
+								"reply"
+							],
+							"variable": [
+								{
+									"key": "postId",
+									"value": "692571726dc6d12670384cd6"
+								},
+								{
+									"key": "commentId",
+									"value": "69257bf78baf4e64a5fb8920"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like on comment",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJFRUUiLCJsYXN0TmFtZSI6IkRlcHQiLCJlbWFpbCI6ImFyaWYuZWVlMTYxQGdtYWlsLmNvbSIsImlhdCI6MTc2NDA2NDcxNiwiZXhwIjoxNzY0NjY5NTE2fQ.I-L6ijhBqpuJVkSx3V5gvpYBUWlkglKR9HJF2uW7HJY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_API}}/post/:postId/comment/:commentId/like",
+							"host": [
+								"{{BASE_API}}"
+							],
+							"path": [
+								"post",
+								":postId",
+								"comment",
+								":commentId",
+								"like"
+							],
+							"variable": [
+								{
+									"key": "postId",
+									"value": "692571726dc6d12670384cd6"
+								},
+								{
+									"key": "commentId",
+									"value": "69257bf78baf4e64a5fb8920"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

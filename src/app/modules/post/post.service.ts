@@ -5,6 +5,7 @@ import { Post } from "./post.model";
 import { JwtPayload } from "jsonwebtoken";
 import { User } from "../user/user.model";
 import { Types } from "mongoose";
+import { TPostService } from "../../types";
 
 const createPostIntoDB = async (
   file: any,
@@ -197,7 +198,7 @@ const likeCommentIntoDB = async (
   return post;
 };
 
-export const PostService = {
+export const PostService: TPostService = {
   createPostIntoDB,
   getPostFromDB,
   likePostIntoDB,
